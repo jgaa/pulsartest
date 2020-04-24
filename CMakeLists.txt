@@ -10,9 +10,6 @@ endif()
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-#add_definitions(-DBOOST_LOG_DYN_LINK)
-
-add_definitions(-DBOOST_COROUTINES_NO_DEPRECATION_WARNING)
 
 find_package(OpenSSL 1.1 REQUIRED)
 
