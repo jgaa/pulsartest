@@ -13,7 +13,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(OpenSSL 1.1 REQUIRED)
 
-set(Boost_USE_STATIC_LIBS ON)
 find_package(Boost 1.67 REQUIRED COMPONENTS
         system
         program_options
@@ -43,4 +42,5 @@ target_link_libraries(${PROJECT_NAME}
 target_compile_definitions(${PROJECT_NAME} PUBLIC
     -DBOOST_COROUTINES_NO_DEPRECATION_WARNING=1
     -DPROJECT_VERSION=\"${PROJECT_VERSION}\"
+    -DBOOST_LOG_DYN_LINK
     )
