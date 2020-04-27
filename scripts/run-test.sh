@@ -123,6 +123,7 @@ echo "Running test"
 time $pulsartest_bin --duration $duration --messages-per-second $messages_per_second --producer-batching true --where $location --storage $storage --pulsar-deployment-cpus $docker_cpus --topics $topics --pulsar-threads $pulsar_threads --asio-threads $asio_threads
 
 if $restart_pulsar; then
-    echo "Cleaning up"
+    echo "Cleaning up..."
     docker stop pulsar
+    sleep 10
 fi
